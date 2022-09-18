@@ -20,12 +20,39 @@ body * {
   font-family: 'Inter', sans-serif;
   line-height: 160%;
 }
+header {
+  margin-top: 32px;
+}
+
+header div {
+  display: flex;
+  width: 120px;
+  padding: 4px;
+  margin: auto;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    90deg,
+    #9572fc 0%,
+    #43e7ad 50.52%,
+    #e2d45c 100%
+  );
+
+  transition: transform 0.3s;
+}
+
+header div:hover {
+  transform: scale(1.1);
+}
+
+header img {
+  width: 100%;
+  border-radius: 50%;
+}
 
 main {
   max-width: 580px;
   width: 90%;
-  margin: auto;
-  margin-top: 32px;
+  margin: 32px auto;
 
   display: grid;
   gap: 24px;
@@ -68,6 +95,13 @@ section ul {
   margin-top: 24px;
 }
 
+section ul li {
+  transition: transform 0.3s;
+}
+section ul li:hover {
+  transform: scale(1.1);
+}
+
 .game-list img {
   width: 90px;
   border-radius: 8px;
@@ -76,4 +110,6 @@ section ul {
 .channel-list img {
   width: 70px;
   border-radius: 50%;
+
+  border: 1px solid #443e54;
 }
