@@ -22,6 +22,7 @@ body * {
 }
 header {
   margin-top: 32px;
+  height: calc(120px + 32px);
 }
 
 header div {
@@ -38,6 +39,7 @@ header div {
   );
 
   transition: transform 0.3s;
+  animation: fromTop 0.7s 0.2s backwards;
 }
 
 header div:hover {
@@ -56,6 +58,19 @@ main {
 
   display: grid;
   gap: 24px;
+}
+
+main section {
+  animation: fromBottom 0.7s backwards;
+}
+main section:nth-child(1) {
+  animation-delay: 0.2s;
+}
+main section:nth-child(2) {
+  animation-delay: 0.4s;
+}
+main section:nth-child(3) {
+  animation-delay: 0.6s;
 }
 
 section {
@@ -112,4 +127,28 @@ section ul li:hover {
   border-radius: 50%;
 
   border: 1px solid #443e54;
+}
+
+/*Animation*/
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-33px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(33px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
